@@ -1,5 +1,5 @@
 
-<div class="card">
+<!-- <div class="card">
   <div class="card-body">
     <div class="form-group">
       <label for="input1">Número de pàgines</label>
@@ -8,6 +8,27 @@
     <div class="form-group">
       <label for="input2">Número de idiomes</label>
       <input type="text" [(ngModel)]="priceForm.value.idiomes" (input)="calculateTotalPrice()" class="form-control" id="input2">
+    </div>
+  </div>
+</div> -->
+
+<div class="card">
+  <div class="card-body">
+    <div class="form-group">
+      <label for="input1" class="input-label">Número de pàgines</label>
+      <div class="input-group">
+        <button class="btn btn-outline-secondary" type="button" (click)="decrementPage()">-</button>
+        <input type="text" [(ngModel)]="priceForm.value.pagines" (input)="calculateTotalPrice()" class="form-control" id="input1">
+        <button class="btn btn-outline-secondary" type="button" (click)="incrementPage()">+</button>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="input2" class="input-label">Número de idiomes</label>
+      <div class="input-group">
+        <button class="btn btn-outline-secondary" type="button" (click)="decrementLanguage()">-</button>
+        <input type="text" [(ngModel)]="priceForm.value.idiomes" (input)="calculateTotalPrice()" class="form-control" id="input2">
+        <button class="btn btn-outline-secondary" type="button" (click)="incrementLanguage()">+</button>
+      </div>
     </div>
   </div>
 </div>

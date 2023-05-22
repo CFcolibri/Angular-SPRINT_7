@@ -34,4 +34,36 @@ export class PanellChildComponent {
     }
 
   }
+  decrementPage() {
+    if (this.priceForm.value.pagines > 0) {
+      this.priceForm.patchValue({
+        pagines: this.priceForm.value.pagines - 1
+      });
+      this.calculateTotalPrice();
+    }
+  }
+
+  incrementPage() {
+    this.priceForm.patchValue({
+      pagines: this.priceForm.value.pagines + 1
+    });
+    this.calculateTotalPrice();
+  }
+
+  decrementLanguage() {
+    if (this.priceForm.value.idiomes > 0) {
+      this.priceForm.patchValue({
+        idiomes: this.priceForm.value.idiomes - 1
+      });
+      this.calculateTotalPrice();
+    }
+  }
+
+  incrementLanguage() {
+    this.priceForm.patchValue({
+      idiomes: this.priceForm.value.idiomes + 1
+    });
+    this.calculateTotalPrice();
+  }
 }
+
