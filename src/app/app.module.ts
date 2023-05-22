@@ -8,11 +8,14 @@ import { HomeComponent } from './home/home.component';
 
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PanellChildComponent } from './panell-child/panell-child.component';
+import { ServeiPanellService } from './servei-panell.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    PanellChildComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ServeiPanellService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

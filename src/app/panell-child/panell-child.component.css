@@ -1,0 +1,29 @@
+.card {
+  width: 200px;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form-group{
+  text-align: center;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+#input1{
+  margin-left: 10px;
+  width: 20px;
+
+}
+
+#input2{
+  margin-left: 10px;
+  width: 20px;
+
+}
+
