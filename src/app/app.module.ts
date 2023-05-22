@@ -9,7 +9,6 @@ import { HomeComponent } from './home/home.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PanellChildComponent } from './panell-child/panell-child.component';
-import { ServeiPanellService } from './servei-panell.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,7 @@ import { ServeiPanellService } from './servei-panell.service';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [ServeiPanellService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
