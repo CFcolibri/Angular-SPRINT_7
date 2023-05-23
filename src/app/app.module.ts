@@ -9,12 +9,14 @@ import { HomeComponent } from './home/home.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PanellChildComponent } from './panell-child/panell-child.component';
+import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PanellChildComponent
+    PanellChildComponent,
+    WelcomePageComponent
   ],
   imports: [
     BrowserModule,

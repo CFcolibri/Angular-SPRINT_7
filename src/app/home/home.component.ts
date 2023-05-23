@@ -1,6 +1,7 @@
 
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -14,6 +15,7 @@ export class HomeComponent {
   totalPrice: number = 0;
 
   constructor(
+    private router: Router,
     private formBuilder: FormBuilder) {
     this.price = this.formBuilder.group({
       web: false,
@@ -45,6 +47,10 @@ export class HomeComponent {
   onChildPriceChanged(childPrice: number) {
     this.childPrice = childPrice;
     this.calculateTotalPrice();
+  }
+
+  redirectToWelcome() {
+    this.router.navigateByUrl('/');
   }
 
 }
