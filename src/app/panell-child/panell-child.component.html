@@ -2,24 +2,12 @@
 <!-- <div class="card">
   <div class="card-body">
     <div class="form-group">
-      <label for="input1">Número de pàgines</label>
-      <input type="text" [(ngModel)]="priceForm.value.pagines" (input)="calculateTotalPrice()" class="form-control" id="input1">
-    </div>
-    <div class="form-group">
-      <label for="input2">Número de idiomes</label>
-      <input type="text" [(ngModel)]="priceForm.value.idiomes" (input)="calculateTotalPrice()" class="form-control" id="input2">
-    </div>
-  </div>
-</div> -->
-
-<div class="card">
-  <div class="card-body">
-    <div class="form-group">
       <label for="input1" class="input-label">Número de pàgines</label>
       <div class="input-group">
         <button class="btn btn-outline-secondary" type="button" (click)="decrementPage()">-</button>
         <input type="text" [(ngModel)]="priceForm.value.pagines" (input)="calculateTotalPrice()" class="form-control" id="input1">
         <button class="btn btn-outline-secondary" type="button" (click)="incrementPage()">+</button>
+
       </div>
     </div>
     <div class="form-group">
@@ -31,10 +19,93 @@
       </div>
     </div>
   </div>
+</div> -->
+
+<!-- <div class="card">
+  <div class="card-body">
+    <div class="form-group">
+      <label for="input1" class="input-label">Número de pàgines</label>
+      <div class="input-group">
+        <button class="btn btn-outline-secondary" type="button" (click)="decrementPage()">-</button>
+        <input type="text" [(ngModel)]="priceForm.value.pagines" (input)="calculateTotalPrice()" class="form-control" id="input1">
+        <button class="btn btn-outline-secondary" type="button" (click)="incrementPage()">+</button>
+        <button class="btn btn-success" (click)="openModal()">Open Modal</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="input2" class="input-label">Número de idiomes</label>
+      <div class="input-group">
+        <button class="btn btn-outline-secondary" type="button" (click)="decrementLanguage()">-</button>
+        <input type="text" [(ngModel)]="priceForm.value.idiomes" (input)="calculateTotalPrice()" class="form-control" id="input2">
+        <button class="btn btn-outline-secondary" type="button" (click)="incrementLanguage()">+</button>
+      </div>
+    </div>
+
+
+    <div class="modal" id="myModal" style="display:  none; position: absolute; top: 100px; right: 100px;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Modal Heading</h4>
+            <button type="button" class="btn-close" (click)="closeModal()" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            Modal Body
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" (click)="closeModal()" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</div> -->
+
+
+
+<!--WOOOORKS-->
+ <div class="card">
+  <div class="card-body">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="form-group">
+        <label for="input1" class="input-label">Número de pàgines</label>
+        <div class="input-group">
+          <button class="btn btn-outline-secondary" type="button" (click)="decrementPage()">-</button>
+          <input type="text" [(ngModel)]="priceForm.value.pagines" (input)="calculateTotalPrice()" class="form-control" id="input1">
+          <button class="btn btn-outline-secondary" type="button" (click)="incrementPage()">+</button>
+          <button id="infoButton1" class="btn btn-success" (click)="openModal()">
+            <i class="fas fa-info-circle circle1"></i>
+          </button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="input2" class="input-label">Número de idiomes</label>
+        <div class="input-group">
+          <button class="btn btn-outline-secondary" type="button" (click)="decrementLanguage()">-</button>
+          <input type="text" [(ngModel)]="priceForm.value.idiomes" (input)="calculateTotalPrice()" class="form-control" id="input2">
+          <button class="btn btn-outline-secondary" type="button" (click)="incrementLanguage()">+</button>
+          <button id="infoButton2" class="btn btn-success" (click)="openModal()">
+            <i class="fas fa-info-circle circle2"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
-
-
-
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true" (click)="closeModal()">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      <div class="modal-body">
+        Please, add number of pages/languages
+        <button type="button" class="btn-close" aria-label="Close" (click)="closeModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 

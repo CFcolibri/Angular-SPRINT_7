@@ -1,6 +1,6 @@
 .card {
-  width: 250px;
-  height: 100px;
+  width: 350px;
+  height: 130px;
   border: 1px solid #ccc;
   border-radius: 3px;
   padding: 10px;
@@ -19,6 +19,7 @@
 .input-label {
   margin-right: 10px;
   flex-shrink: 0;
+  margin-top: 10px;
 }
 
 .input-group {
@@ -31,6 +32,8 @@
   background-color:rgb(245, 55, 109);
 }
 
+
+
 #input1{
   margin-left: 5px;
   margin-right: 5px;
@@ -41,8 +44,40 @@
 #input2{
   margin-left: 5px;
   margin-right: 5px;
-
   width: 20px;
-
 }
 
+.modal-body{
+  text-align: center;
+  padding: 10px;
+  background-color: aqua;
+  border: 2px solid#615d5d;
+  border-radius: 30px;
+}
+.modal{
+  display: none;
+}
+
+#infoButton1{
+  background-color:transparent;
+  border: 0;
+  font-size: 16px;
+  margin-left: 3px;
+  margin-bottom: 20px;
+}
+
+#infoButton2{
+  background-color:transparent;
+  border: 0;
+  font-size: 16px;
+  margin-left: 3px;
+  margin-bottom: 20px;
+}
+
+.circle2{
+  color: #ccc;
+}
+
+.circle1{
+  color: #ccc;
+}

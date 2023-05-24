@@ -65,5 +65,20 @@ export class PanellChildComponent {
     });
     this.calculateTotalPrice();
   }
+
+  openModal(){
+    const modalDiv = document.getElementById('myModal');
+    if(modalDiv!= null) {
+      modalDiv.style.display = 'block';
+    }
+  }
+  closeModal(){
+    const modalDiv = document.getElementById('myModal');
+    if(modalDiv!= null) {
+      modalDiv.style.display = 'none';
+    }
+  }
+
+
 }
 
