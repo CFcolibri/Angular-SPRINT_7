@@ -1,0 +1,70 @@
+.container-budget{
+  width: 250px;
+  height: 130px;
+  border: 3px solid #ccc;
+  border-radius: 3px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 30px;
+  text-align: center;
+  display: flex;
+  align-items: flex-start;
+
+}
+.form-container{
+  flex: 1;
+}
+
+.client-list{
+  position: fixed;
+  top: 100px;
+  right: 100px;
+  /* padding: 200px; */
+  background-color: #f1f1f1;
+}
+
+.col-name{
+  padding-top: 10px;
+
+}
+
+.col-id{
+  padding-top: 10px;
+
+}
+
+#add{
+  margin-top: 20px;
+  background-color:rgb(245, 55, 109);
+  padding: 10px;
+}
+
+#clientName{
+  margin-left: 5px;
+}
+#clientId{
+  margin-left: 5px;
+}
+
+.client-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.client-list th,
+.client-list td {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.client-list .client-name {
+  text-align: center;
+  border-right: 1px solid #ccc;
+
+}
+
+.client-list .client-id {
+  text-align: center;
+  border-right: 1px solid #ccc;
+
+}

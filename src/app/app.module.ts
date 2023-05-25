@@ -10,13 +10,15 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PanellChildComponent } from './panell-child/panell-child.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { BudgetsComponent } from './budgets/budgets.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PanellChildComponent,
-    WelcomePageComponent
+    WelcomePageComponent,
+    BudgetsComponent
   ],
   imports: [
     BrowserModule,

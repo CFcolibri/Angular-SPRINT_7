@@ -1,0 +1,55 @@
+<!-- <p>budgets works!</p> -->
+
+
+<div class="container-budget">
+  <div class="form-container">
+    <div class="col-name">
+      <label for="clientName">Client Name:</label>
+      <input type="text" id="clientName" [(ngModel)]="clientName">
+    </div>
+
+    <div class="col-id">
+      <label for="clientId">Client ID:</label>
+      <input type="text" id="clientId" [(ngModel)]="clientId">
+    </div>
+
+    <button id="add" (click)="addClient()">Add Client</button>
+  </div>
+</div>
+
+<div class="client-list">
+  <ul>
+    <li *ngFor="let client of clients">{{ client.name }} - {{ client.id }}</li>
+  </ul>
+</div>
+
+<!-- <div class="container-budget">
+  <table class="client-list">
+    <thead>
+      <tr>
+        <th>Client Name</th>
+        <th>Client ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clients">
+        <td>{{ client.name }}</td>
+        <td>{{ client.id }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="input-fields">
+    <div class="col-name">
+      <label for="clientName">Client Name:</label>
+      <input type="text" id="clientName" [(ngModel)]="clientName">
+    </div>
+
+    <div class="col-id">
+      <label for="clientId">Client ID:</label>
+      <input type="text" id="clientId" [(ngModel)]="clientId">
+    </div>
+
+    <button id="add" (click)="addClient()">Add Client</button>
+  </div>
+</div> -->

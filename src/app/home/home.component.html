@@ -1,5 +1,7 @@
+
 <button class="welcome-button" (click)="redirectToWelcome()">Go to Welcome Page</button>
 <div class="container">
+  <app-budgets></app-budgets>
   <section class="example-section" [formGroup]="price">
     <h4>Què vols fer?</h4>
     <p><mat-checkbox formControlName="web" (change)="calculateTotalPrice()" >Una pàgina web (500€)</mat-checkbox></p>
@@ -12,5 +14,6 @@
     <h4>Preu Total: {{ totalPrice }}€</h4>
   </section>
 </div>
+
 
 
