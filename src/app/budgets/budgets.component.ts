@@ -37,11 +37,15 @@ export class BudgetsComponent {
   @Input() totalPrice: number | null = null;
   clientName: string = '';
   clientId: number | null = null;
-  clients: { name: string, id: number, totalPrice: number }[] = [];
+  clients: { name: string, id: number, totalPrice: number, date:Date }[] = [];
+  originalClients: { name: string, id: number, totalPrice: number, date: Date }[] = [];
+  searchName: string = '';
 
   addClient() {
     if (this.clientName && this.clientId !== null && this.totalPrice !== null) {
-      this.clients.push({ name: this.clientName, id: this.clientId, totalPrice: this.totalPrice });
+      const currentDate = new Date();
+      this.clients.push({ name: this.clientName, id: this.clientId, totalPrice: this.totalPrice, date:currentDate });
+      this.originalClients = [...this.clients];
     }
   }
 
@@ -49,4 +53,21 @@ export class BudgetsComponent {
     this.clients.sort((a, b) => a.name.localeCompare(b.name));
   }
 
+  sortByDate() {
+    this.clients.sort((a, b) => a.date.getTime() - b.date.getTime());
+  }
+
+  resetSorting() {
+    this.clients = [...this.originalClients];
+  }
+
+  filterClientsByName() {
+    if (this.searchName.trim() === '') {
+      this.clients = [...this.originalClients];
+    } else {
+      this.clients = this.originalClients.filter(client =>
+        client.name.toLowerCase().includes(this.searchName.toLowerCase())
+      );
+    }
+  }
 }

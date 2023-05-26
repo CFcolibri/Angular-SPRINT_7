@@ -12,16 +12,18 @@
       <label for="clientId">Client ID:</label>
       <input type="text" id="clientId" [(ngModel)]="clientId">
     </div>
-
+    <input type="text" [(ngModel)]="searchName" placeholder="Search by Name" (input)="filterClientsByName()">
     <button id="add" (click)="addClient()">Add Client</button>
     <button (click)="sortClients()">Sort Clients</button>
+    <button (click)="sortByDate()">Sort by Date</button>
+    <button (click)="resetSorting()">Reset Sorting</button>
 
   </div>
 </div>
 
 <div class="client-list">
   <ul>
-    <li *ngFor="let client of clients">{{ client.name }} - {{ client.id }} - Total Price: {{ client.totalPrice }}€</li>
+    <li *ngFor="let client of clients">{{ client.name }} - {{ client.id }} - Total Price: {{ client.totalPrice }} € - {{ client.date | date:'short' }}</li>
   </ul>
 </div>
 
