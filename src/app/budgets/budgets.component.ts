@@ -1,26 +1,3 @@
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-budgets',
-  templateUrl: './budgets.component.html',
-  styleUrls: ['./budgets.component.css']
-})
-export class BudgetsComponent {
-    clientName!: string;
-    clientId: number | null = null;
-    clients: { name: string, id: number }[] = [];
-
-
-
-  addClient() {
-    if (this.clientName && this.clientId !== null) {
-      this.clients.push({ name: this.clientName, id: this.clientId });
-      this.clientName = '';
-      this.clientId = null;
-    }
-  }
-}
-
 // import { Component } from '@angular/core';
 // import { ServeiPanellService } from '../servei-panell.service';
 
@@ -30,27 +7,41 @@ export class BudgetsComponent {
 //   styleUrls: ['./budgets.component.css']
 // })
 // export class BudgetsComponent {
-//   clientName!: string;
-//   clientId!: number;
-//   clients: { name: string, id: number }[] = [];
+//     clientName!: string;
+//     clientId: number | null = null;
+//     clients: { name: string, id: number, totalPrice: number }[] = [];
 
-//   constructor(private serveiPanellService: ServeiPanellService) {}
+//   constructor(
+//     private panellService: ServeiPanellService
+//    ){}
 
-//   addClient() {
-//     if (this.clientName && this.clientId) {
-//       this.clients.push({ name: this.clientName, id: this.clientId });
-//       this.clientName = '';
-//       this.clientId = 0;
-//       this.calculateTotalPrice();
+
+//    addClient() {
+//     if (this.clientName && this.clientId !== null) {
+//       const totalPrice = this.panellService.calculateTotalPrice(0, 0); // Modify the parameters as per your requirements
+//       this.clients.push({ name: this.clientName, id: this.clientId, totalPrice: totalPrice });
 //     }
 //   }
 
-//   calculateTotalPrice(): void {
-//     this.serveiPanellService.calculateTotalPrice(this.clients);
-//   }
 
-//   getTotalPrice(): number {
-//     return this.serveiPanellService.getTotalPrice();
-//   }
 // }
 
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-budgets',
+  templateUrl: './budgets.component.html',
+  styleUrls: ['./budgets.component.css']
+})
+export class BudgetsComponent {
+  @Input() totalPrice: number | null = null;
+  clientName: string = '';
+  clientId: number | null = null;
+  clients: { name: string, id: number, totalPrice: number }[] = [];
+
+  addClient() {
+    if (this.clientName && this.clientId !== null && this.totalPrice !== null) {
+      this.clients.push({ name: this.clientName, id: this.clientId, totalPrice: this.totalPrice });
+    }
+  }
+}

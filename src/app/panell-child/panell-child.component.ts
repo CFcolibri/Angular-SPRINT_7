@@ -31,6 +31,7 @@ export class PanellChildComponent {
       this.priceChanged.emit(childPrice);
     } else {
       this.priceChanged.emit(0);
+
     }
 
   }
