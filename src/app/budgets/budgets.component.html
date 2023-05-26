@@ -23,7 +23,10 @@
 
 <div class="client-list">
   <ul>
-    <li *ngFor="let client of clients">{{ client.name }} - {{ client.id }} - Total Price: {{ client.totalPrice }} € - {{ client.date | date:'short' }}</li>
+    <li *ngFor="let client of clients">{{ client.name }} - {{ client.id }} - Total Price: {{ client.totalPrice }} € - {{ client.date | date:'short' }}
+      <button (click)="deleteClient(client)">Delete</button>
+    </li>
+
   </ul>
 </div>
 

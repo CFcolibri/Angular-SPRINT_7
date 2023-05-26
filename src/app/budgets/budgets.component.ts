@@ -70,4 +70,11 @@ export class BudgetsComponent {
       );
     }
   }
+
+  deleteClient(client: { name: string, id: number, totalPrice: number, date: Date }) {
+    const index = this.clients.indexOf(client);
+    if (index > -1) {
+      this.clients.splice(index, 1);
+    }
+  }
 }
