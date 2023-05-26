@@ -44,4 +44,9 @@ export class BudgetsComponent {
       this.clients.push({ name: this.clientName, id: this.clientId, totalPrice: this.totalPrice });
     }
   }
+
+  sortClients() {
+    this.clients.sort((a, b) => a.name.localeCompare(b.name));
+  }
+
 }
