@@ -1,18 +1,56 @@
 .container-budget{
-  width: 250px;
-  height: 130px;
-  border: 3px solid #ccc;
+  position: absolute;
+  left: 125px;
+  top: 0;
+  width: 400px;
+  height: 300px;
+  border: 1px solid #ccc;
   border-radius: 3px;
-  padding: 10px;
-  margin-top: 20px;
-  margin-left: 30px;
-  text-align: center;
+  padding: 20px 30px;
+  margin-top: 120px;
+}
+
+.col-name {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.col-id {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
 
 }
+
 .form-container{
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/*
+.col-add button {
+  margin: 0 5px;
+} */
+
+.col-add-line2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px; /* Adjust the margin as needed */
+}
+
+.col-add-line2 button {
+  margin: 10px 5px; /* Adjust the spacing between buttons as needed */
+
+}
+
+.col-add-line3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .client-list{
@@ -23,15 +61,6 @@
   background-color: #f1f1f1;
 }
 
-.col-name{
-  padding-top: 10px;
-
-}
-
-.col-id{
-  padding-top: 10px;
-
-}
 
 #add{
   margin-top: 20px;
