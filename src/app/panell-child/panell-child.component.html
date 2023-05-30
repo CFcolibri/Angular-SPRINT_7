@@ -67,9 +67,9 @@
 <!--WOOOORKS-->
  <div class="card">
   <div class="card-body">
-    <div class="d-flex justify-content-between align-items-center">
-      <div class="form-group">
-        <label for="input1" class="input-label">Número de pàgines</label>
+    <div class="form-group"></div>
+      <div class="d-flex justify-content-between align-items-center">
+        <label for="input1" class="input-label">Number Pages</label>
         <div class="input-group">
           <button class="btn btn-outline-secondary" type="button" (click)="decrementPage()">-</button>
           <input type="text" [(ngModel)]="priceForm.value.pagines" (input)="calculateTotalPrice()" class="form-control" id="input1">
@@ -80,15 +80,16 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="input2" class="input-label">Número de idiomes</label>
-        <div class="input-group">
-          <button class="btn btn-outline-secondary" type="button" (click)="decrementLanguage()">-</button>
-          <input type="text" [(ngModel)]="priceForm.value.idiomes" (input)="calculateTotalPrice()" class="form-control" id="input2">
-          <button class="btn btn-outline-secondary" type="button" (click)="incrementLanguage()">+</button>
-          <button id="infoButton2" class="btn btn-success" (click)="openModal()">
-            <i class="fas fa-info-circle circle2"></i>
-          </button>
-        </div>
+        <div class="d-flex justify-content-between align-items-center">
+        <label for="input2" class="input-label">Number Languages</label>
+          <div class="input-group">
+            <button class="btn btn-outline-secondary" type="button" (click)="decrementLanguage()">-</button>
+            <input type="text" [(ngModel)]="priceForm.value.idiomes" (input)="calculateTotalPrice()" class="form-control" id="input2">
+            <button class="btn btn-outline-secondary" type="button" (click)="incrementLanguage()">+</button>
+            <button id="infoButton2" class="btn btn-success" (click)="openModal()">
+              <i class="fas fa-info-circle circle2"></i>
+            </button>
+          </div>
       </div>
     </div>
   </div>

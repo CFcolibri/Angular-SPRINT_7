@@ -9,7 +9,6 @@
   <button (click)="resetSorting()">Reset Sorting</button>
 
 </div> -->
-
 <div class="container-budget">
   <div class="form-container">
     <div class="col-name">
@@ -26,52 +25,47 @@
       <button id="add" (click)="addClient()">Add Client</button>
     </div>
 
-    <div class="col-add-line2">
+    <!-- <div class="col-add-line2">
       <button id="sort" (click)="sortClients()">Sort Clients</button>
       <button id="date" (click)="sortByDate()">Sort by Date</button>
       <button id="reset" (click)="resetSorting()">Reset Sorting</button>
-    </div>
+    </div> -->
 
-    <div class="col-add-line3"></div>
+    <!-- <div class="col-add-line3"></div>
+      <input id="search" type="text" [(ngModel)]="searchName" placeholder="Search by Name" (input)="filterClientsByName()">
+    </div> -->
+    <div class="client-list">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Total Price</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let client of clients">
+            <td>{{ client.id }}</td>
+            <td>{{ client.name }}</td>
+            <td>{{ client.date | date:'short' }}</td>
+            <td>{{ client.totalPrice }} €</td>
+            <td>
+              <button (click)="deleteClient(client)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="col-add-line2">
+        <button id="sort" (click)="sortClients()">Sort Clients</button>
+        <button id="date" (click)="sortByDate()">Sort by Date</button>
+        <button id="reset" (click)="resetSorting()">Reset Sorting</button>
+      </div>
+
+      <div class="col-add-line3"></div>
       <input id="search" type="text" [(ngModel)]="searchName" placeholder="Search by Name" (input)="filterClientsByName()">
     </div>
-  </div>
-<div class="client-list">
-  <ul>
-    <li *ngFor="let client of clients">{{ client.name }} - {{ client.id }} - Total Price: {{ client.totalPrice }} € - {{ client.date | date:'short' }}
-      <button (click)="deleteClient(client)">Delete</button>
-    </li>
 
-  </ul>
-</div>
 
-<!-- <div class="container-budget">
-  <table class="client-list">
-    <thead>
-      <tr>
-        <th>Client Name</th>
-        <th>Client ID</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let client of clients">
-        <td>{{ client.name }}</td>
-        <td>{{ client.id }}</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="input-fields">
-    <div class="col-name">
-      <label for="clientName">Client Name:</label>
-      <input type="text" id="clientName" [(ngModel)]="clientName">
-    </div>
-
-    <div class="col-id">
-      <label for="clientId">Client ID:</label>
-      <input type="text" id="clientId" [(ngModel)]="clientId">
-    </div>
-
-    <button id="add" (click)="addClient()">Add Client</button>
-  </div>
-</div> -->

@@ -1,11 +1,12 @@
 
-<button class="welcome-button" (click)="redirectToWelcome()">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M14 7l-5 5 5 5V7z" fill="currentColor"/>
-  </svg>
-
-</button>
+<div>
+  <button class="welcome-button" (click)="redirectToWelcome()">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="28" height="28">
+      <path d="M0 0h24v24H0z" fill="none"/>
+      <path d="M14 7l-5 5 5 5V7z" fill="currentColor"/>
+    </svg>
+  </button>
+</div>
 <div class="container">
   <h1>What Your Client Want?</h1>
   <app-budgets [totalPrice]="totalPrice"></app-budgets>
