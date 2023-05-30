@@ -9,7 +9,7 @@
 </div>
 <div class="container">
   <h1>What Your Client Want?</h1>
-  <app-budgets [totalPrice]="totalPrice"></app-budgets>
+  <app-budgets [totalPrice]="totalPrice" (clientAdded)="handleClientAdded()"></app-budgets>
   <section class="example-section" [formGroup]="price">
 
     <p><mat-checkbox formControlName="web" (change)="calculateTotalPrice()" >Web Page (500€)</mat-checkbox></p>
@@ -21,6 +21,8 @@
   <section class="example-section" [formGroup]="price">
     <h4>Total Price: {{ totalPrice }}€</h4>
   </section>
+  <!-- <button (click)="resetForm()">Reset Form</button> -->
+
 </div>
 
 

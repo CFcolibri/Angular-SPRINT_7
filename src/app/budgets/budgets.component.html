@@ -52,7 +52,7 @@
             <td>{{ client.date | date:'short' }}</td>
             <td>{{ client.totalPrice }} €</td>
             <td>
-              <button (click)="deleteClient(client)">Delete</button>
+              <button id="delete" (click)="deleteClient(client)">Delete</button>
             </td>
           </tr>
         </tbody>

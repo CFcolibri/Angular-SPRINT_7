@@ -60,7 +60,7 @@
   right: 100px;
   border: 1px solid black;;
   /* padding: 200px; */
-  background-color: #f1f1f1;
+  background-color: #e0eef3;
 }
 
 
@@ -134,6 +134,25 @@
   .client-list {
     text-align: center;
     /* width: 100%; */
+  }
+
+  #sort{
+    background-color: transparent;
+    color: #484747;
+  }
+  #date{
+    background-color: transparent;
+    color: #484747;
+  }
+  #reset{
+    background-color: transparent;
+    color: #484747;
+  }
+
+  #delete{
+    background-color: transparent;
+    color: #484747;
+    border: 0;
   }
 
 

@@ -25,6 +25,11 @@ export class HomeComponent {
 
   }
 
+
+  ngOnInit() {
+    this.calculateTotalPrice();
+  }
+
   calculateTotalPrice() {
     this.totalPrice = 0;
 
@@ -53,6 +58,16 @@ export class HomeComponent {
     this.router.navigateByUrl('/');
   }
 
+  resetForm() {
+    this.price.reset();
+    this.childPrice = 0;
+    this.totalPrice = 0;
+  }
+
+    // Event handler for client addition
+    handleClientAdded() {
+      this.resetForm();
+    }
 }
 
 
