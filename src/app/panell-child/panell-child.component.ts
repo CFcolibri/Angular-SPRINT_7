@@ -9,7 +9,7 @@ import { ServeiPanellService } from '../servei-panell.service';
 })
 export class PanellChildComponent {
   priceForm: FormGroup;
-  selectedLanguage: string = 'pages'; // Default to 'pages'
+  selectedLanguage: string = 'pages';
   @Output() priceChanged: EventEmitter<number> = new EventEmitter<number>();
 
   constructor(
@@ -66,14 +66,6 @@ export class PanellChildComponent {
     });
     this.calculateTotalPrice();
   }
-
-  // openModal(){
-  //   const modalDiv = document.getElementById('myModal');
-  //   if(modalDiv!= null) {
-  //     modalDiv.style.display = 'block';
-  //   }
-  // }
-
 
   openModal(language: string) {
     this.selectedLanguage = language;

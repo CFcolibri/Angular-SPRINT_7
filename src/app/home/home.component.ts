@@ -1,7 +1,7 @@
 
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 
 
 @Component({
@@ -25,27 +25,33 @@ export class HomeComponent {
 
   }
 
-
-  ngOnInit() {
-    this.calculateTotalPrice();
-  }
-
   calculateTotalPrice() {
     this.totalPrice = 0;
 
+    const queryParams: any = {};
+
     if (this.price.get('web')?.value) {
       this.totalPrice += 500;
+      queryParams.web = true;
     }
 
     if (this.price.get('consoltoria')?.value) {
       this.totalPrice += 300;
+      queryParams.consoltoria = true;
     }
 
     if (this.price.get('campanya')?.value) {
       this.totalPrice += 200;
+      queryParams.campanya = true;
     }
 
     this.totalPrice += this.childPrice;
+
+    const navigationExtras: NavigationExtras = {
+      queryParams: queryParams
+    };
+
+    this.router.navigate([], navigationExtras);
 
   }
 

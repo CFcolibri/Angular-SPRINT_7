@@ -32,19 +32,14 @@
 }
 
 
-/*
-.col-add button {
-  margin: 0 5px;
-} */
-
 .col-add-line2 {
   display: flex;
   justify-content: center;
-  margin-top: 5px; /* Adjust the margin as needed */
+  margin-top: 5px;
 }
 
 .col-add-line2 button {
-  margin: 10px 5px; /* Adjust the spacing between buttons as needed */
+  margin: 10px 5px;
 
 }
 
@@ -59,7 +54,6 @@
   top: 100px;
   right: 100px;
   border: 1px solid black;;
-  /* padding: 200px; */
   background-color: #e0eef3;
 }
 
