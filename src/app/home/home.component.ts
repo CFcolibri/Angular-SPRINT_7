@@ -20,7 +20,9 @@ export class HomeComponent {
     this.price = this.formBuilder.group({
       web: false,
       consoltoria: false,
-      campanya: false
+      campanya: false,
+      pagines: 0,
+      idiomes: 0
     });
 
   }
@@ -70,10 +72,18 @@ export class HomeComponent {
     this.totalPrice = 0;
   }
 
-    // Event handler for client addition
-    handleClientAdded() {
-      this.resetForm();
-    }
+  // Event handler for client addition
+  handleClientAdded() {
+    this.resetForm();
+  }
+
+  onWebPageChange(event: any) {
+    if (!event.checked) {
+      this.childPrice = 0;
+      this.calculateTotalPrice();
+  }
+
+}
 }
 
 

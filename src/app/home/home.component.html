@@ -11,8 +11,8 @@
   <h1>What Your Client Want?</h1>
   <app-budgets [totalPrice]="totalPrice" (clientAdded)="handleClientAdded()"></app-budgets>
   <section class="example-section" [formGroup]="price">
-
-    <p><mat-checkbox formControlName="web" (change)="calculateTotalPrice()" >Web Page (500€)</mat-checkbox></p>
+    <p><mat-checkbox formControlName="web" (change)="onWebPageChange($event)">Web Page (500€)</mat-checkbox></p>
+    <!-- <p><mat-checkbox formControlName="web" (change)="calculateTotalPrice()" >Web Page (500€)</mat-checkbox></p> -->
     <app-panell-child *ngIf="price.get('web')?.value" (priceChanged)="onChildPriceChanged($event)"></app-panell-child>
     <p><mat-checkbox formControlName="consoltoria" (change)="calculateTotalPrice()">Consulting (300€)</mat-checkbox></p>
     <p><mat-checkbox formControlName="campanya" (change)="calculateTotalPrice()">Google Ads (200€)</mat-checkbox></p>
@@ -21,7 +21,6 @@
   <section class="example-section" [formGroup]="price">
     <h4>Total Price: {{ totalPrice }}€</h4>
   </section>
-  <!-- <button (click)="resetForm()">Reset Form</button> -->
 
 </div>
 
